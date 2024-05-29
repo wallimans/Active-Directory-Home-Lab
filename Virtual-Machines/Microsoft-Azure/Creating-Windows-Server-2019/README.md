@@ -1,5 +1,7 @@
 # Overview:
 
+In this lab we will set up an instance of Windows Server 2019 on the Microsoft Azure Cloud for use down the road with different labs such as configuring Active Directory. The Azure Cloud is especially useuful for owners of Apple's ARM chips who's primary computers aren't able to run Virtual Box and virtualize x86 architecture. Microsoft generously provides us with a 30 day, 250 hour, or $200 free credit window (whichever comes first). You will want to be sure to shut down your virtual machines when not in use so you don't eat into these free credits.
+
 ### Step One:
 
 The first thing we are going to want to do after logging into portal.azure.com with our Microsoft account is click the Start button under "Start with an Azure free trial".
