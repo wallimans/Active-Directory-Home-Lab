@@ -12,7 +12,7 @@ For this project we are going to spin up an instance of Windows Server 2019 on A
 
 This file will server as the master document containing all the parts and steps, but you can navigate to individual sections as well:
 
-Part One
+[Part One](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-One)
 Part Two
 Part Three
 
