@@ -2,12 +2,13 @@
 
 We will be using the following tools:
 
+For this project we are going to spin up an instance of Windows Server 2019 on Azure, configure it as our Domain Controller, then set it up to run Active Directory. This will require creating an IP addressing scheme, two Virtual NICs (one for the interior and exterior networks), as well as configuring RAS/NAT and DHCP to let any host machines communicate with the outside network and automatically obtain their internal IP addresses. Before we deploy a host machine we will run a Powershell script to automatically provision 1,000 users for our practice purposes.
+
 - Microsoft Azure
+- RDP Client
 - Windows Server 2019
 - Active Directory Services
 - Powershell
-
-For this project we are going to spin up an instance of Windows Server 2019 on Azure, configure it as our Domain Controller, then set it up to run Active Directory. This will require creating an IP addressing scheme, two Virtual NICs (one for the interior and exterior networks), as well as configuring RAS/NAT and DHCP to let any host machines communicate with the outside network and automatically obtain their internal IP addresses. Before we deploy a host machine we will run a Powershell script to automatically provision 1,000 users for our practice purposes.
 
 This file will server as the master document containing all the parts and steps, but you can navigate to individual sections as well:
 
@@ -19,7 +20,7 @@ Part Three
 
 ### Step One: Installing Windows Server 2019 on Azure
 
-Our first step is creating the virtual machine that we will configure as our domain controller and use for the lab. I've broken this process down [here](https://github.com/wallimans/Home-Lab/tree/main/Virtual-Machines/Microsoft-Azure/Creating-Windows-Server-2019).
+Our first step is creating the virtual machine that we will configure as our domain controller and use for the lab. For our purposes we will be using Microsoft's Azure platform to spin up our virtual machines in the cloud. This can be done other ways like running hypervisors such as Virtual Box directly on your machine, but for people with Apple Silicone processors (M1, M2, M3, etc.) you won't be able to run any instances of Windows Server as they aren't supported by ARM processors yet. This way you can follow along regardless of the computer you are using, as long as you can run an RDP client to connect to the boxes, which are available for all major operating systems. I've broken this step down [here](https://github.com/wallimans/Home-Lab/tree/main/Virtual-Machines/Microsoft-Azure/Creating-Windows-Server-2019).
 
 ## Step Two: Establishing Ethernet Settings
 
@@ -64,4 +65,4 @@ From here, let's right click our new _INTERNAL_ adapter and navigate to properti
 
 <img width="1440" alt="Screenshot 2024-06-03 at 3 15 59 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/d2ca3a70-7327-47d4-a6ab-eff12326a7c8">
 
-And that concludes Part One! We've ensured we have both the interfaces we need to continue and are ready to move onto Part Two.
+And that concludes Part One! We've ensured we have both the interfaces we need to continue the project and are ready to move onto Part Two.
