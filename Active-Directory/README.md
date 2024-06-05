@@ -18,6 +18,7 @@ This file will server as the master document containing all the parts and steps,
 - [Part One:](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-One) Configuring Windows Server 2019 Ethernet Settings
 - [Part Two:](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-Two) Installing Active Directory Services and Creating Admin Account
 - [Part Three:](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-Three) Configuring RAS/NAT and DHCP
+- [Part Four](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-Four) Creating 1,000 Users with Powershell
 
 ## Part One: Configuring Windows Server 2019 Ethernet Settings
 
