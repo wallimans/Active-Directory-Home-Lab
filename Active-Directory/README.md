@@ -496,3 +496,5 @@ As the script runs you should see the names actively being generated until event
 
 <img width="1440" alt="Screenshot 2024-06-05 at 1 49 15 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/fc232539-ea24-4110-814f-e34666730829">
 
+To go ahead and verify everything worked as expected, let's open our "Active Directory Users and Computers" by entering and clicking it in our search bar, then we can expand our server and there we have it! We can see there was a new OU "_USERS" created with a bunch of individual users. Perfect! That concludes this part of the lab!
+
