@@ -2,12 +2,15 @@
 
 For this project we are going to spin up an instance of Windows Server 2019 on Azure, configure it as our Domain Controller, then set it up to run Active Directory. This will require creating an IP addressing scheme, two Virtual NICs (one for the interior and exterior networks), as well as configuring RAS/NAT and DHCP to let any host machines communicate with the outside network and automatically obtain their internal IP addresses. Before we deploy a host machine we will run a Powershell script to automatically provision 1,000 users for our practice purposes.
 
-We will be using the following tools:
+We will be using/configuring the following tools:
 
 - Microsoft Azure
 - RDP Client
 - Windows Server 2019
 - Active Directory Services
+- Remote Access Services (RAS)
+- Network Address Translation (NAT)
+- Dynamic Host Configuration Protocol (DHCP)
 - Powershell
 
 This file will server as the master document containing all the parts and steps, but you can navigate to individual sections as well:
@@ -68,6 +71,10 @@ From here, let's right click our new _INTERNAL_ adapter and navigate to properti
 And that concludes Part One! We've ensured we have both the interfaces we need to continue the project and are ready to move onto Part Two.
 
 ## Part Two: Installing Active Directory Services and Creating Admin Account
+
+Active Directory is essentially a centralized system used in Windows environments to manage and organize information about users, computers, and resources on a network. It acts as a directory service, providing authentication and authorization services, managing access to network resources, and facilitating efficient management of networked devices and users.
+
+So let's get it going!
 
 ### Step One: Installing Active Directory
 
