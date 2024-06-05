@@ -355,3 +355,67 @@ Then let's right click it again and select "Refresh":
 <img width="1440" alt="Screenshot 2024-06-04 at 5 28 14 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/1d38613c-6997-4ce6-906d-c2d0d5772531">
 
 And that concludes part three!
+
+## Part Four: Provisioning 1,000 Users w/ Powershell
+
+For this next part we will be using the Powershell scripting language to provision some Active Directory Accounts for us to practice with.
+
+PowerShell is a tool from Microsoft that helps you automate tasks and manage computer settings easily. Think of it like a supercharged command prompt that lets you write simple scripts to handle repetitive jobs and control your system more efficiently. It works on both Windows and other operating systems, making it versatile for various tech tasks.
+
+At the time of writing this walkthrough I am by no means fully proficient with Powershell, but I do have enough familiarity with other programming languages to understand what something does when I break it down line by line. With enough Google-fu I was able to cobble together something that works for our purposes. The script looks like this:
+
+```
+$PASSWORD_FOR_USERS   = "Password1"
+$USER_FIRST_LAST_LIST = Get-Content .\names.txt
+
+$password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+New-ADOrganizationalUnit -Name _USERS -ProtectedFromAccidentalDeletion $false
+
+foreach ($n in $USER_FIRST_LAST_LIST) {
+    $first = $n.Split(" ")[0].ToLower()
+    $last = $n.Split(" ")[1].ToLower()
+    $username = "$($first.Substring(0,1))$($last)".ToLower()
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $first `
+               -Surname $last `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_USERS,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+}
+```
+
+In essence this script creates users based on a .txt file containing a large list of names and ensures that each user is set up with a default password, placed in a specific organizational unit "_USERS", and has a username generated from their first and last names. Let's break it down section by section!
+
+**1) Setting Up Variables**
+
+`$PASSWORD_FOR_USERS = "Password1"`
+
+This line sets a variable called `$PASSWORD_FOR_USERS` with the value `"Password1"`. This will be the default password for the new users.
+
+`$USER_FIRST_LAST_LIST = Get-Content .\names.txt`
+
+This line reads a file named names.txt that contains a list of names, and stores each line from the file into the $USER_FIRST_LAST_LIST variable.
+
+**2) Preparing the Password**
+
+`$password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force`
+
+This line converts the plain text password "Password1" into a secure string format that is required by the New-AdUser cmdlet. A secure string is a way to store sensitive information, like passwords, in a protected format that is not easily readable or accessible.
+
+3) Creating the "_USERS" Organizational Unit
+
+`New-ADOrganizationalUnit -Name _USERS -ProtectedFromAccidentalDeletion $false`
+
+This line creates a new Active Directory Organizational Unit (OU) named _USERS, which is not protected from accidental deletion.
+
+4) Looping Through the Names
+
+`foreach ($n in $USER_FIRST_LAST_LIST) {`
+
+This line begins a loop that processes each name in the `$USER_FIRST_LAST_LIST`.
+
