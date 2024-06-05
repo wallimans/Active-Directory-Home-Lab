@@ -1,8 +1,8 @@
 # Overview
 
-We will be using the following tools:
-
 For this project we are going to spin up an instance of Windows Server 2019 on Azure, configure it as our Domain Controller, then set it up to run Active Directory. This will require creating an IP addressing scheme, two Virtual NICs (one for the interior and exterior networks), as well as configuring RAS/NAT and DHCP to let any host machines communicate with the outside network and automatically obtain their internal IP addresses. Before we deploy a host machine we will run a Powershell script to automatically provision 1,000 users for our practice purposes.
+
+We will be using the following tools:
 
 - Microsoft Azure
 - RDP Client
