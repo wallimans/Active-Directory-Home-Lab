@@ -1,6 +1,6 @@
 # Table of Contents
 
-This repository will serve as a directory for my various home lab projects, thanks for stopping by!
+This repository serves as a directory for my various home lab projects, thanks for stopping by!
 
 ## Active Directory
 
