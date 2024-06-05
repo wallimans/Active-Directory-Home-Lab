@@ -303,3 +303,48 @@ On the next page we will be given the option to add exclusions to our address ra
 
 We will then be able to configure our lease duration. For the purpose of our lab, the default of 8 days should be fine. Go ahead and click "Next":
 
+<img width="1440" alt="Screenshot 2024-06-04 at 5 13 33 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/f1b3df62-67d0-40cd-baec-0a85cb1b7067">
+
+On the next page, let's select "Yes, I want to configure these options now", then click "Next":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 13 48 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/18adb91c-3125-4af2-9293-efddd464feb3">
+
+Next we will configure our Default Gateway. A default gateway is the network device, typically a router, that serves as the access point or IP router that a networked device uses to send information to devices on other networks or the internet. It acts as an intermediary that routes traffic from a local network to external networks, ensuring communication beyond the local subnet.
+
+The default gateway for this network will be the Internal NIC we configured on the server, so in my case 192.168.10.1. I've gone ahead and typed that in and clicked "Add". Then we can click "Next":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 16 55 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/93b9b28f-457d-4110-aa4e-a216f7bb76e6">
+
+On this page we can select which domain we want computers on our network to use for DNS name resolution.
+
+DNS (Domain Name System) is like the internet's phonebook—it translates human-readable domain names (like www.example.com) into numerical IP addresses that computers use to identify each other on the network. It's a crucial system for navigating the internet because it allows us to access websites, send emails, and perform other online activities using familiar domain names instead of remembering long strings of numbers.
+
+When we configured Active Directory, the server automatically configured itself as the DNS server, so in this instance we should leave this option as "mydomain.com" and click "Next":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 21 32 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/81920215-d1c6-4a1d-9fe7-a48d6c28d1f2">
+
+On this page we can configure WINS Servers.
+
+WINS (Windows Internet Name Service) is an older network service used primarily in Windows environments to resolve NetBIOS names to IP addresses. It's similar to DNS but specifically designed for older Windows-based networks. WINS servers help in identifying and locating computers and resources on a network by providing a centralized database for mapping NetBIOS names to IP addresses. However, with the prevalence of DNS and modern networking technologies, the need for WINS has diminished, and it's often only used in legacy environments or for compatibility with older applications.
+
+Being an older service, we don't really need to set this up, so go ahead and click "Next":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 24 16 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/237202d6-70c9-48c4-aabf-b6cb58b0afcc">
+
+On this page let's select "Yes, I want to active this scope now" then click "Next":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 24 54 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/087ddc19-ebbf-4828-b167-a5c7ce688266">
+
+Then click "Finish"!:
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 25 48 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/d07c92c5-9506-4d0f-a744-70f07710e65a">
+
+Back in the DHCP dashboard, let's right click our domain and select "Authorize":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 27 52 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/0eee9f7f-e503-45e9-9e54-6fd94cfbb20f">
+
+Then let's right click it again and select "Refresh":
+
+<img width="1440" alt="Screenshot 2024-06-04 at 5 28 14 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/1d38613c-6997-4ce6-906d-c2d0d5772531">
+
+And that concludes part three!
