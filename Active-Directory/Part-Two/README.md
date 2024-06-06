@@ -1,4 +1,4 @@
-## Part Three: Configuring RAS/NAT and DHCP
+## Part Two: Configuring RAS/NAT and DHCP
 
 RAS (Remote Access Service) and NAT (Network Address Translation) are tools that help us manage how our network connects to the outside world. RAS allows our remote employees to securely access the company's network from anywhere, like they were in the office. NAT, on the other hand, lets multiple devices on our internal network share a single public IP address to access the internet, keeping our internal IPs hidden and adding a layer of security. Together, they ensure our network is accessible and secure for everyone who needs it.
 
