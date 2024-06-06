@@ -1,4 +1,4 @@
-## Part Four: Provisioning 1,000 Users w/ Powershell
+## Part Three: Provisioning 1,000 Users w/ Powershell
 
 For this next part we will be using the Powershell scripting language to provision some Active Directory Accounts for us to practice with.
 
