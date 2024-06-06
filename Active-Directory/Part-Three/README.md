@@ -61,7 +61,7 @@ This line creates a new Active Directory Organizational Unit (OU) named _USERS, 
 
 This line begins a loop that processes each name in the `$USER_FIRST_LAST_LIST`.
 
-5) Splitting the First and Last Names
+**5) Splitting the First and Last Names**
 
 ```
 $first = $n.Split(" ")[0].ToLower()
@@ -70,19 +70,19 @@ $last = $n.Split(" ")[1].ToLower()
 
 These lines ensure that each name in the list is split into a first and last name. The names are then converted to lowercase.
 
-6) Generating the Username
+**6) Generating the Username**
 
 `$username = "$($first.Substring(0,1))$($last)".ToLower()`
 
 This creates a username by taking the first letter of the first name and combining it with the entire last name, all in lowercase.
 
-7) Printing the Username
+**7) Printing the Username**
 
 `Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan`
 
 This prints the message "Creating user: "[username]" with a black background and cyan text, so you can see which user is being created while it happens.
 
-8) Creating the Active Directory Users
+**8) Creating the Active Directory Users**
 
 ```
 New-AdUser -AccountPassword $password `
