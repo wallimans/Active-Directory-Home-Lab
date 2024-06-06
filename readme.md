@@ -1,6 +1,6 @@
 # Overview
 
-This repository serves as a directory for my various home lab projects, thanks for stopping by!
+This is a repository for my various home lab projects, thanks for stopping by!
 
 # Table of Contents
 
