@@ -1,4 +1,4 @@
-## Part Two: Installing Active Directory Services and Creating Admin Account
+## Part One: Installing Active Directory Services and Creating Admin Account
 
 Active Directory is essentially a centralized system used in Windows environments to manage and organize information about users, computers, and resources on a network. It acts as a directory service, providing authentication and authorization services, managing access to network resources, and facilitating efficient management of networked devices and users.
 
