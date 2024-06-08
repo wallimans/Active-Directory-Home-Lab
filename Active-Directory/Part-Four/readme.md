@@ -31,3 +31,27 @@ This takes us into the "Group Policy Management Editor". Inside this editor on t
 Inside these Policies and Preferences folders we can click to expand and we will see there are whole host of options we can configure broken into various folders. Clicking to expand "Windows Settings" we can see there are options for Scripts, Security Settings, Folder Redirection, Policy Based QoS, Deployed Printers. Inside of these there are even more options to select until you narrow down to the specific rules you are trying to implement:
 
 <img width="1440" alt="Screenshot 2024-06-08 at 12 25 16 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/31c5f18f-22a0-45f2-bdf1-8c550ef87263">
+
+Let's implement a password policy. Go back to the Group Policy Management dashboard and locate "Default Domain Policy" on the dropdown beneath our domain. Default Domain Policy is especially useful because Policies and Preferences applied to this area are applicable to every user and computer on the domain, not just the specific Organizational Units. Password policies are a crucial step in securing our domain, so we would want to apply these policies to everyone and everything. Right click "Default Domain Policy" and click "Edit":
+
+<img width="1440" alt="Screenshot 2024-06-08 at 12 34 42 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/c81e823f-3065-40c7-9471-37529354696d">
+
+Under Computer Configuration, click to drop down "Windows Settings" > "Security Settings" > "Account Policies" > then click "Password Policy". Here we can see a number of options to enforce password history, age, length, etc. We can see under "Maximum password age" that the default is 42 days. Let's go ahead and double click to select and edit that setting:
+
+<img width="1440" alt="Screenshot 2024-06-08 at 12 40 36 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/e5ee80aa-3996-47e1-8ea3-df6451854efc">
+
+I've went ahead and changed this default to 30 days, which might be more in line with our organizations security mandates. Go ahead and click "Apply" then "OK":
+
+<img width="1440" alt="Screenshot 2024-06-08 at 12 42 51 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/cbc45b2a-a01a-4940-9cb0-3b58b8dd7e90">
+
+And just like that we've configured our password policy! Fairly straightforward stuff, but essential knowledge for working with Active Directory.
+
+Let's show off one more configuration. Back on our Group Policy Management dashboard, let's locate and click our `_ADMINS` OU. On this page we can see a few differrent tabs - "Linked Group Policy Objects", "Group Policy Inheritence", and "Delegation". Let's hone in on the Group Policy Inheritence and click on that. Here we can see that our `_ADMINS` OU has inherited the rules from the Default Domain Policy. Considering this is the OU used for admins, we might not want them to inherit all of the rules that we configure in the Default Domain Policy because the administrtors might need access to things regular users don't have access to. So we can actually right click the `_ADMINS` OU and select "Block Inheritence". This will prevent the administrators from inheriting the rules we've configured across the rest of the domain! 
+
+<img width="1440" alt="Screenshot 2024-06-08 at 12 50 40 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/4784ff9b-a0fb-4aee-9b83-4f5c31bf84a7">
+
+We can now see a little exclamation mark icon next to the `_ADMINS` OU, demonstrating that inheritence is blocked. On the other side of this coin, we can right click to select the Default Domain Policy and select "Enforced", which will require absolutelty everyone in the domain to follow these rules:
+
+<img width="1440" alt="Screenshot 2024-06-08 at 12 53 53 PM" src="https://github.com/wallimans/Home-Lab/assets/170472167/fb3cadbb-a6ed-425a-94b6-90e2266f2f89">
+
+Good stuff! There are so many rules and configurations to explore, so it's worth clicking around and seeing where different things are located for future reference. Some of the most useful configuration options would be password policies, account lockout policies, audit policies, security options, software restriction policies, Windows update polcies, etc. Hope this demonstration has been helpful!
