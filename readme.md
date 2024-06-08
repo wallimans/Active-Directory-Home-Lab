@@ -9,6 +9,7 @@ This is a repository for my various home lab projects, thanks for stopping by!
 - [Part One](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-One) Installing Active Directory Services and Creating Admin Account
 - [Part Two](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-Two) Configuring RAS/NAT and DHCP
 - [Part Three](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-Three) Creating OU and 1,000 Users with Powershell
+- [Part Four](https://github.com/wallimans/Home-Lab/blob/main/Active-Directory/Part-Four) Managing Group Policy Objects (GPOs)
 
 ### [Microsoft Azure](https://github.com/wallimans/Home-Lab/tree/main/Microsoft-Azure)
 
