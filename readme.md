@@ -4,7 +4,7 @@ This is a repository for my various home lab projects, thanks for stopping by!
 
 # Table of Contents
 
-#IT Projects
+## IT Projects
 
 ### [Active Directory](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory)
 
