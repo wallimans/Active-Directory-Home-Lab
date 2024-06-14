@@ -20,3 +20,10 @@ This is a repository for my various home lab projects, thanks for stopping by!
 ## Networking Projects
 
 ## Security Projects
+
+- [SOC Automation (In Progress...)](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation)
+  - [Part 1](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation/Part-1)
+  - [Part 2](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation/Part-2)
+  - [Part 3](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation/Part-3)
+  - [Part 4](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation/Part-4)
+  - [Part 5](https://github.com/wallimans/Home-Lab/tree/main/Security/SOC-Automation/Part-5)
