@@ -4,6 +4,8 @@ This is a repository for my various home lab projects, thanks for stopping by!
 
 # Table of Contents
 
+#IT Projects
+
 ### [Active Directory](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory)
 
 - [Part One](https://github.com/wallimans/Home-Lab/tree/main/Active-Directory/Part-One) Installing Active Directory Services and Creating Admin Account
@@ -14,3 +16,7 @@ This is a repository for my various home lab projects, thanks for stopping by!
 ### [Microsoft Azure](https://github.com/wallimans/Home-Lab/tree/main/Microsoft-Azure)
 
 - [Creating Virtual Machines in Microsoft Azure](https://github.com/wallimans/Home-Lab/tree/main/Virtual-Machines/Microsoft-Azure/Creating-Windows-Server-2019)
+
+## Networking Projects
+
+## Security Projects
